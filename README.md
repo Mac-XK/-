@@ -1,4 +1,9 @@
-# 小火箭节点提取器 🚀
+# 小火箭节点提取器 🚀 / Rocket Node Extractor
+
+<details>
+<summary><b>🇨🇳 中文文档 (点击展开)</b></summary>
+
+## 📖 项目简介
 
 一个简洁易用的iOS应用程序，用于获取和管理代理节点配置，支持一键导入Shadowrocket（小火箭）。
 
@@ -190,6 +195,207 @@ extractButton.layer.cornerRadius = your_radius
 - 🚀 集成Shadowrocket导入功能
 - ⚡ 添加动画效果和用户反馈
 
+</details>
+
 ---
 
-**⭐ 如果这个项目对你有帮助，请给个Star支持一下！**
+<details>
+<summary><b>🇺🇸 English Documentation (Click to expand)</b></summary>
+
+## 📖 Project Overview
+
+A simple and user-friendly iOS application for fetching and managing proxy node configurations with one-click import to Shadowrocket.
+
+## 📱 App Screenshots
+
+![App Interface](https://img.shields.io/badge/iOS-App-blue?style=flat-square&logo=apple)
+![Version](https://img.shields.io/badge/Version-1.0-green?style=flat-square)
+![Swift](https://img.shields.io/badge/Swift-5.0+-orange?style=flat-square&logo=swift)
+
+## ✨ Key Features
+
+- 🌐 **Auto Node Fetching**: Automatically fetch the latest proxy node configurations from remote server
+- 📋 **One-Click Copy**: Quickly copy node links to clipboard
+- 🚀 **Direct Import**: Support one-click import to Shadowrocket app
+- 🎨 **Beautiful UI**: Yellow-purple gradient background with modern UI design
+- ⚡ **Real-time Updates**: Node information updates automatically daily
+- 🔄 **Animation Effects**: Smooth fade-in and spring animations
+
+## 🛠 Tech Stack
+
+- **Language**: Swift
+- **UI Framework**: UIKit
+- **Networking**: URLSession
+- **Layout**: Auto Layout (Programmatic)
+- **Minimum Support**: iOS 13.0+
+
+## 📦 Project Structure
+
+```
+Rocket/
+├── AppDelegate.swift          # App delegate
+├── SceneDelegate.swift        # Scene delegate
+├── ViewController.swift       # Main view controller
+├── Info.plist                # App configuration
+├── Assets.xcassets           # Asset files
+└── Base.lproj/              # Localization resources
+```
+
+## 🚀 Quick Start
+
+### Requirements
+
+- Xcode 12.0 or later
+- iOS 13.0 or later
+- macOS 10.15 or later
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/节点提取器.git
+   cd 节点提取器
+   ```
+
+2. **Open the project**
+   ```bash
+   open Rocket.xcodeproj
+   ```
+
+3. **Configure developer account**
+   - Select the project in Xcode
+   - Configure your developer account in "Signing & Capabilities"
+   - Change Bundle Identifier to your unique identifier
+
+4. **Run the app**
+   - Select target device or simulator
+   - Click the run button (⌘+R)
+
+## 📱 Usage Guide
+
+### Basic Operations
+
+1. **Launch App**: Open the app to see the yellow-purple gradient main interface
+2. **Fetch Nodes**: Click "开始提取" (Start Extraction) button to get latest nodes
+3. **Copy Links**: Click "复制" (Copy) button to copy node links to clipboard
+4. **Import to Shadowrocket**: Click "小火箭导入" (Shadowrocket Import) to directly import to Shadowrocket app
+
+### Feature Details
+
+#### Node Fetching
+- App fetches node data from `https://rocket.xkcc.vip/get_history.php`
+- Supports JSON format response parsing
+- Automatically extracts valid HTTP/HTTPS links
+
+#### UI Elements
+- **Title**: "小火箭节点提取器" - Main title with shadow effect
+- **Extract Button**: Blue rounded button that triggers node fetching
+- **Node List**: Dynamically generated node link list
+- **Action Buttons**: Each node has copy and import buttons
+- **Usage Guide**: Detailed usage instructions at the bottom
+
+## 🔧 Customization
+
+### Modify API Endpoint
+
+To change the node data source, modify the URL in `ViewController.swift`:
+
+```swift
+guard let url = URL(string: "https://your-api-endpoint.com/api") else {
+    print("Invalid URL")
+    return
+}
+```
+
+### Custom UI Styling
+
+#### Modify Gradient Background
+```swift
+gradientLayer.colors = [
+    UIColor.your_color1.cgColor,
+    UIColor.your_color2.cgColor
+]
+```
+
+#### Adjust Button Style
+```swift
+extractButton.backgroundColor = UIColor.your_color
+extractButton.layer.cornerRadius = your_radius
+```
+
+## 🔗 API Documentation
+
+### Node Data API
+
+**Endpoint**: `https://rocket.xkcc.vip/get_history.php`
+
+**Method**: GET
+
+**Response Format**: JSON
+
+**Response Example**:
+```json
+{
+  "files": [
+    {
+      "links": [
+        {
+          "url": "ss://base64-encoded-config"
+        },
+        {
+          "url": "vmess://base64-encoded-config"
+        }
+      ]
+    }
+  ]
+}
+```
+
+## 🤝 Contributing
+
+Issues and Pull Requests are welcome!
+
+### Development Workflow
+
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Code Standards
+
+- Follow Swift official coding conventions
+- Use meaningful variable and function names
+- Add necessary comments
+- Keep code clean and readable
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## 📞 Contact
+
+- **Developer**: MacXK
+- **WeChat**: Xcode-XK
+- **Created**: April 20, 2025
+
+## ⚠️ Disclaimer
+
+This application is for educational and research purposes only. Please comply with local laws and regulations. The developer is not responsible for any consequences arising from the use of this application.
+
+## 🔄 Changelog
+
+### v1.0 (2025-04-20)
+- ✨ Initial release
+- 🎨 Implemented yellow-purple gradient UI
+- 🌐 Added node fetching functionality
+- 📋 Support one-click copy node links
+- 🚀 Integrated Shadowrocket import feature
+- ⚡ Added animation effects and user feedback
+
+</details>
+
+---
+
+**⭐ 如果这个项目对你有帮助，请给个Star支持一下！ / If this project helps you, please give it a Star!**
